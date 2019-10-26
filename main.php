@@ -676,26 +676,6 @@ if(isset($_POST['E_jmeno'])){
     //zobraz je indikace ze bylo stitknute pro vyber poctu zaznamu na stranku
     //sidenumber je cislo stranky pri strankovani
 		if(isset($_POST['zobraz']) | !empty($_SESSION['sidenumber'])){
-			/*
-			   if(!empty($_SESSION['filtr']) && !empty($_SESSION['limitmin'])){
-			   		//vypis_songy($_SESSION['filtr'],$_SESSION['limitmin'],$_SESSION['limitmax']);
-			   		vypis_songy($_SESSION['filtr'],$_SESSION['limitmin'],$_SESSION['lastnumberzobraz']);
-			   }
-			   else if(!empty($_SESSION['filtr'])){
-			   		vypis_songy($_SESSION['filtr'],0,$_SESSION['lastnumberzobraz']);
-			   }
-			   else if(!empty($_SESSION['limitmin'])){
-			   		//vypis_songy(NULL,$_SESSION['limitmin'],$_SESSION['limitmax']);
-			   		vypis_songy(NULL,$_SESSION['limitmin'],$_SESSION['lastnumberzobraz']);
-			   }
-			   else	if(!empty($_SESSION['lastnumberzobraz'])){
-			   		vypis_songy(NULL,0,$_SESSION['lastnumberzobraz']);
-			   	}
-			   else{
-			   		//vypis_songy(NULL,0,20);
-			   		vypis_songy(NULL,0,$_SESSION['lastnumberzobraz']);
-			   }
-			   */
 			   if(!empty($_SESSION['filtr']))
 			   		vypis_songy($_SESSION['filtr'],$_SESSION['limitmin'],$_SESSION['lastnumberzobraz']);
 			   else
@@ -830,7 +810,7 @@ if(isset($_POST['E_jmeno'])){
 </div>
 <!-- a ***************************************SONG_DETAIL----------------------------------------->
 <script type="text/javascript">
-	function editKapela(x){//funkce vlozzi do kapela edit vybranou polozku ze selectu
+	function editKapela(x){//funkce vlozi do kapela edit vybranou polozku ze selectu
 		var pole=document.getElementById("editpolekapela");
 		var select=document.getElementById('selectkapela');
 		pole.value=select.options[select.selectedIndex].text;
